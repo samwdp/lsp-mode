@@ -26,10 +26,18 @@
 
 (require 'lsp-mode)
 
-(defvar lsp-ols--executable-location "c:/tools/ols/ols.exe")
-(defvar lsp-language-id-configuration '((odin-mode . "odin")))
+(defgroup lsp-ols nil
+  "LSP support for Nim, using nimlsp."
+  :group 'lsp-mode
+  :link '(url-link "https://github.com/DanielGavin/ols"))
+
+(defcustom lsp-ols-executable-location "c:/tools/ols/ols.exe"
+  "Path to `ols' executable"
+  :type 'string
+  :group 'lsp-ols)
+
 (lsp-register-client
- (make-lsp-client :new-connection (lsp-stdio-connection lsp-ols--executable-location)
+ (make-lsp-client :new-connection (lsp-stdio-connection lsp-ols-executable-location)
                   :major-modes '(odin-mode)
                   :activation-fn (lsp-activate-on "odin")
                   :server-id 'ols
