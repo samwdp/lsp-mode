@@ -31,7 +31,7 @@
 (lsp-register-client
  (make-lsp-client :new-connection (lsp-stdio-connection lsp-ols--executable-location)
                   :major-modes '(odin-mode)
-                  :activation-fn (lsp-activate-on "nim")
+                  :activation-fn (lsp-activate-on "odin")
                   :server-id 'ols
                   :multi-root t))
 
