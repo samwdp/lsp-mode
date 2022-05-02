@@ -456,6 +456,14 @@
     "debugger": "Not available"
   },
   {
+    "name": "ols",
+    "full-name": "ols",
+    "server-name": "odin-language-server",
+    "server-url": "https://github.com/DanielGavin/ols",
+    "installation-url": "https://github.com/DanielGavin/ols#installation",
+    "debugger": "Not available"
+  },
+  {
     "name": "openscad",
     "full-name": "OpenSCAD",
     "server-name": "openscad-language-server",
